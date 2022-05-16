@@ -1,0 +1,102 @@
+/*Меню(список) в Header*/
+.header {
+   &__menu {
+      .menu {
+         &__list {
+            display: flex;
+            flex-wrap: wrap;
+         }
+      
+         &__link {
+            display: inline-block;
+            text-decoration: none;
+            letter-spacing: 0.1px;
+            color: #fff;
+            padding: 31px 20px;
+            font-size: 14px;
+            text-transform: uppercase
+         }
+         &__link:hover {
+            background: #1F1F1F;
+            transition: .5s;
+            text-shadow: 0 0 1.6px #f3f3f3, 0 0 1.7px #f3f3f3, 0 0 1.7px #f3f3f3;
+         }
+      }
+   }
+}
+/*Меню в Header - конец*/
+
+/*Адаптация Меню(список) в Header*/
+@media screen and (max-width:768px) {
+   .header {
+      &__menu {
+         .menu{
+            &__link {
+               padding: 18px 5px;
+            }
+         }
+      }
+   }
+}
+
+/*Адаптация Меню(список) в Header под Бургер*/
+@media screen and (max-width:576px) {
+   .header {
+      .menu__list {
+         visibility: hidden;
+         opacity: 0;
+         height: 0;
+         width: 0;
+         padding: 0;
+         margin: 0;
+         /*Основное меню при нажатии кнопки бургер-меню*/
+         &.menu__active {
+            overflow: auto;/*для того, чтобы меню скроллилось в случае, если оно не влезает на экран*/
+            visibility: visible;
+            opacity: 0.9;
+            display: block;
+            transition: 1s;
+            position: absolute;
+            top: 0;
+            right: 0%;
+            background: #222;
+            width: 70%;
+            height: 100vh; /*100% высота экрана*/
+            padding: 65px 0;
+            z-index: 100;
+         }
+         &.menu__active > .menu__item {
+            display: block;
+            margin: 12px auto;
+            text-align: center;
+            width: 80%;
+            border: none;
+         }
+         &.menu__active > .menu__item > .menu__link {
+            width: 100%;
+            background: #222;
+            border-bottom: 1px solid #aaa;
+            border-radius: 0px;
+         }
+         &.menu__active > .menu__item > .menu__link:hover, 
+         &.menu__active > .menu__item.active > .menu__link {
+            color: #fff;
+            background: #0F0F0F;
+         }
+         /*Основное меню при нажатии кнопки бургер-меню - конец*/
+      }
+   }
+}
+@media screen and (max-width:350px) {
+   .header {
+      .menu__list {
+         &.menu__active {
+            width: 100%;
+         }
+      }
+   }
+}
+/*Адаптация Меню(список) в Header под Бургер - конец*/
+
+/*Адаптация Меню(список) в Header - конец*/
+

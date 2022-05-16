@@ -1,0 +1,54 @@
+@mixin grid ($cols, $gutter) {
+  width: (100% / 12) * $cols - $gutter;
+}
+
+@mixin grid_lg ($cols, $gutter) {
+  @media screen and (max-width:1024px) { //1024
+    width: (100% / 12) * $cols - $gutter;
+  }
+}
+
+@mixin grid_md ($cols, $gutter) {
+  @media screen and (max-width:992px) {
+    width: (100% / 12) * $cols - $gutter;
+  }
+}
+
+@mixin grid_sm ($cols, $gutter) {
+    @media screen and (max-width:768px) {
+      width: (100% / 12) * $cols - $gutter;
+  }
+}
+@mixin grid_xs ($cols, $gutter) {
+    @media screen and (max-width:576px) { 
+      width: (100% / 12) * $cols - $gutter;
+  }
+}
+
+@media screen and (max-width:1024px) {
+   
+}
+@media screen and (max-width:992px) {
+   
+}
+@media screen and (max-width:768px) {
+   
+}
+@media screen and (max-width:576px) {
+   
+}
+@media screen and (max-width:370px) {
+   
+}
+
+@mixin grid_my($cols, $margin) {
+  margin-right: $margin;
+  margin-bottom: $margin;
+  height: 350px;
+  background: $green;
+  width: ((100% - (($cols - 1) * $margin)) / $cols);
+
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+}

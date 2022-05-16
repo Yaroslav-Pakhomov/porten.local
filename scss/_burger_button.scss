@@ -1,0 +1,82 @@
+/* Кнопка мобильного меню (бургер) */
+.mobile {
+   &__menu {
+      display: none;
+      width: 50px;
+      position: relative;
+      /*right: 0%; */ 
+      /*top: 0px;*/ 
+
+      .menu {
+         &__btn {
+            display: block;
+            transition: 1s;
+            margin: 0 auto;
+            width: 35px;
+            height: 35px;
+            /* border-radius: 10px;*/
+            /* background: #a7a49c;*/
+         }
+
+         &__btn span,
+         &__btn::after,
+         &__btn::before {
+            display: block;
+            position: absolute;
+            transition: 1s;
+            top: 50%; /*отступ по вертикали от левого верхнего угла блока .mobile__menu */
+            left: 50%; /*отступ по горизонтали от левого верхнего угла блока .mobile__menu */
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            margin-left: -12px; /*половина ширины*/
+            margin-top: -1px; /*половина высоты*/
+         }
+         &__btn:hover span,
+         &__btn:hover::after,
+         &__btn:hover::before  {
+            box-shadow: 0 0 0.6px 0.4px #f3f3f3;
+         }
+         &__btn::after,
+         &__btn::before {
+            content: '';
+         }
+
+         &__btn::after {
+            transform: translateY(7px);
+         }
+         &__btn::before {
+            transform: translateY(-7px);
+         }
+      }
+   }
+}
+ /* Кнопка мобильного меню (бургера) - конец */
+
+/* Адаптация Кнопка мобильного меню (бургер) */
+@media screen and (max-width:576px) {
+   .mobile__menu {
+      display: block; /*Показываем бургер-меню*/
+      z-index: 100;
+      .menu__active {
+         transform: translate(0px, -35px);
+         transition: 1s;
+         /*Классы при нажатии кнопки бургер-меню*/
+         >span {
+            opacity: 0;
+         }
+         &::before {
+            transform: rotate(45deg);
+            transition: 1s;
+            z-index: 1;
+         }
+         &::after {
+            transform: rotate(-45deg);
+            transition: 1s;
+            z-index: 1;
+         }
+         /*Классы при нажатии кнопки бургер-меню - конец*/
+      }
+   }
+}
+/*Адаптация Кнопка мобильного меню (бургер) - конец*/

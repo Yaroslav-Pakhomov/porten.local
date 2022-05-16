@@ -1,0 +1,138 @@
+/* Блок "Новая коллекция"*/ 
+.newcollection {
+   // * {
+   //    outline: 1px solid red;
+   //    }
+   background: #000;
+   &_container {
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__goods {
+      margin: 54px auto 54px;
+      .goods__title {
+         text-align: center;
+         margin-bottom: 50px;
+         margin-left: 80px;
+         margin-right: 80px;
+         h2 {padding-bottom: 50px;}
+         h2::after {
+            left: 28%;
+         }
+      }
+   }
+   &__row {
+      margin-left: 80px;
+      margin-right: 80px;
+   }
+
+   &__cell {
+      // width: 31%;
+      color: #fff;
+      font-family: Playfair Display;
+      a {
+         color: #fff;
+         text-decoration: none;
+      }
+   }
+
+   &__catalog {
+      background: url('../img/4.season2020_2021/02.png') no-repeat 0% 0%;
+      // height: 880px;
+   }
+}
+/* Адаптация Блока "Новая коллекция"*/ 
+@media screen and (max-width:992px) {
+   .newcollection {
+      &__goods{
+         .goods__title {
+            margin-left: 5px;
+            margin-right: 5px;
+            h2::after {
+               left: 24%;
+            }
+         }
+      }
+      &__row {
+         margin-left: 5px;
+         margin-right: 5px;
+      }
+   }
+}
+@media screen and (max-width:768px) {
+   .newcollection {
+      &__goods{
+         .goods__title {
+            h2::after {
+               left: 12%;
+            }
+         }
+      } 
+   }
+}
+/* Адаптация Блока "Новая коллекция" - конец*/ 
+/*Содержимое правого блока "Новая коллекция"*/ 
+.catalog {
+   &__title {
+      text-align: center;
+      margin-top: 484px;
+      margin-bottom: 32px;
+      h2 {padding-bottom: 30px;}
+      h2::after {
+         left: 34%;
+      }
+   }
+   &__link {
+      max-width: 150px;
+      width: 96%;
+      margin: 0 auto;
+      a {
+         color: #fff;
+      }
+   }
+}
+/*Содержимое правого блока "Новая коллекция" - конец*/ 
+
+/*Адаптация Содержимое правого блока "Новая коллекция"*/ 
+@media screen and (max-width:1200px) {
+   .catalog {
+      &__title {
+         margin-top: 350px;
+      }
+   }
+}
+@media screen and (max-width:992px) {
+   .catalog {
+      &__title {
+         h2::after {
+            left: 31%;
+         }
+      }
+   }
+}
+@media screen and (max-width:768px) {
+   .catalog {
+      &__title {
+         h2::after {
+            left: 24%;
+         }
+      }
+      &__item {
+         margin-bottom: 40px;
+      }
+   }
+}
+@media screen and (max-width:576px) {
+   .catalog {
+      
+   }
+}
+/*Адаптация Содержимое правого блока "Новая коллекция" - конец*/ 
+
+/* Блок "Новая коллекция" - конец*/ 
+
+

@@ -1,0 +1,107 @@
+.logo {
+    // * {
+   //    outline: 1px solid red;
+   //    }
+   background: #000;
+   &__container {
+      background: url('../img/3.logo/01.png') no-repeat 50% 50%;
+      color: #fff;
+      width: 100%;
+      max-width: 1920px;
+      padding: 150px 0 142px;
+      margin: 0 auto;
+   }
+
+   &__header {
+      margin: 0 auto;
+      padding: 110px 60px;
+      border: 4px solid #FFFFFF;
+      box-sizing: border-box;
+      width: 320px;
+      height: 320px;
+   }
+
+   &__title {
+      text-align: center;
+      position: relative;
+      font-size: 64px;
+   }
+
+   &__title h1 {
+      padding-bottom: 4px;
+      font-family: "Post Bold";
+   }
+
+   &__title::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      bottom: 0;
+      height: 2px;
+      left: 16%;
+      background-color: #fff;
+      margin: 0px 0px 0px -25px;
+   }
+
+   &__subtitle {
+      font-size: 22px;
+      text-transform: uppercase;
+      padding-top: 8px;
+      font-family: PT Sans;
+      text-align: center;
+   }
+
+
+
+   &__text {
+      margin: 80px auto 0;
+      width: 58%;
+      text-align: center;
+      font-size: 16px;
+      font-family: PT Sans;
+      text-transform: uppercase;
+      line-height: 150%;
+   }
+}
+
+@media screen and (max-width:992px) {
+   .logo {
+      &__container{
+         padding: 125px 0 125px;
+      }
+   }
+}
+
+@media screen and (max-width:768px) {
+   .logo {
+      &__container{
+         padding: 95px 0 95px;
+      }
+   }
+}
+
+@media screen and (max-width:576px) {
+   .logo {
+      &__container{
+         padding: 30px 0 30px;
+      }
+      &__header {
+         width: 200px;
+         height: 200px;
+         padding: 70px 20px;
+      }
+      &__title {
+         font-size: 40px;
+         &::after{
+            width: 114px;
+            left: 29%;
+         }
+      }
+      &__subtitle {
+         font-size: 16px;
+      }
+      &__text {
+         font-size: 12px;
+      }
+   }
+}

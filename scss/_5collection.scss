@@ -1,0 +1,83 @@
+/* Блок "Коллекция"*/ 
+.collection {
+   background: #000;
+   &__icon {
+      background: url('../img/5.collection2018/01.png') no-repeat 50% 50%;
+      
+   }
+
+   &__catalog {
+      background: #000;
+   }
+
+   &__title {
+      margin: 100px auto 40px;
+      text-align: center;
+      h2 {padding-bottom: 40px;}
+      h2::after {left: 33%;}
+   }
+
+   &__text {
+      color: #fff;
+      font-size: 14px;
+      max-width: 471px;
+      width: 80%;
+      margin: 0 auto 63px;
+      text-align: center;
+   }
+
+   &__item {
+      margin-bottom: 102px;
+   }
+
+   &__link {
+      max-width: 300px;
+      width: 98%;
+      margin: 0 auto;
+   }
+}
+/* Адаптация Блока "Коллекция"*/ 
+@media screen and (max-width:992px) {
+   .collection {
+      &__title {
+         h2::after {left: 27%;}
+      }
+   }
+}
+@media screen and (max-width:768px) {
+   .collection {
+      &__title {
+         margin: 60px auto 40px;
+         h2::after {left: 18%;}
+      }
+      &__text {
+         margin: 0 auto 40px;
+      }
+      &__link {
+         padding: 20px 8px;
+      }
+      &__item {
+         margin-bottom: 90px;
+      }
+   }
+}
+@media screen and (max-width:576px) {
+   .collection {
+      &__icon {
+         background: url('../img/5.collection2018/01.png') no-repeat 50% 0%;
+         height: 300px;
+         order: 2;
+      }
+      &__title {
+         margin: 40px auto;
+      }
+      &__link {
+         padding: 10px 8px;
+      } 
+      &__item {
+         margin-bottom: 40px;
+      }
+   }
+}
+/* Адаптация Блока "Коллекция" - конец*/ 
+/* Блок "Коллекция" - конец*/ 

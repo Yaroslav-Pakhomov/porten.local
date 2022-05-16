@@ -1,0 +1,144 @@
+.footer {
+   background: #0F0F0F;;
+   &__container {
+      max-width: 1920px;
+      width: 100%;
+      margin: 0 auto;
+      padding:  80px 0 100px;
+      background: url('../img/8.footer/01.png');
+      
+   }
+
+   &__row {
+      max-width: 1200px;
+      width: 98%;
+      margin: 0 auto;
+      align-items: flex-start;
+      
+   }
+
+   &__cell {
+      text-align: left;
+   }
+
+   &__copyright {
+      color: #fff;
+      background: #0F0F0F;
+      max-width: 1200px;
+      width: 98%;
+      margin: 0 auto;
+      padding: 17px 0;
+      font-size: 12px;
+   }
+}
+
+.cell {
+
+   &__title {
+      font-family: Playfair Display;
+      margin-bottom: 40px;
+      h2 {
+         font-size: 24px;
+      }
+      h2::after {
+         width: 0px;
+         height: 0px;
+      }
+   }
+
+   &__body {
+      font-family: PT Sans;
+      p {
+         
+         color: #fff;
+         font-size: 14px;
+      }
+      a {
+         display: inline-block;
+         padding: 10px 20px;
+         color: #D0D0D0;
+         text-decoration: none;
+         background: #0F0F0F;
+         margin: 0 20px 20px 0;
+      }
+      a:hover {
+         text-decoration: underline;
+      }
+
+      .form {
+         margin-top: 37px;
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+      }
+      input[type=text],
+      input[type=submit] {
+         border: none;
+         height: 42px;
+         color: #D0D0D0;
+         padding: 10px 20px;
+         margin: 0;
+      }
+
+      input[type=text] {
+         background: rgba(255, 255, 255, 0.4);
+         width: 60%;
+      }
+      input[type=text]::placeholder {
+         color: #D0D0D0;
+      }
+      input[type=text]:focus::placeholder {
+         color: transparent;
+         transition: .5s;
+      }
+      input[type=submit] {
+         background: #0F0F0F;
+         width: 40%;
+         cursor: pointer;
+      }
+   }
+}
+
+@media screen and (max-width:1024px) {
+   
+}
+@media screen and (max-width:992px) {
+   .footer {
+      &__row {
+         justify-content: space-evenly;
+      }
+      &__cell:nth-child(1) {
+         width: 90%;
+         order: 3;
+      }
+      &__cell{
+         width: 43%;
+      }
+   }
+}
+@media screen and (max-width:768px) {
+   
+}
+@media screen and (max-width:576px) {
+   
+   .cell {
+      input[type=text],
+      input[type=submit] {
+         // margin: 0 auto;
+         width: 90%;
+      }
+      input[type=text]::placeholder {
+         text-align: center;
+      }
+   }
+}
+@media screen and (max-width:370px) {
+   .footer {
+
+      &__cell{
+         width: 90%;
+      }
+      
+   }
+   
+}

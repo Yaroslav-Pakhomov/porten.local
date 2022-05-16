@@ -1,0 +1,204 @@
+@import "_mixins";
+
+.col-1 {
+   @include grid(1, $gutter);
+}
+.col-2 {
+   @include grid(2, $gutter);
+}
+.col-3 {
+   @include grid(3, $gutter);
+}
+.col-4 {
+   @include grid(4, $gutter);
+}
+.col-5 {
+   @include grid(5, $gutter);
+}
+.col-6 {
+   @include grid(6, $gutter);
+}
+.col-7 {
+   @include grid(7, $gutter);
+}
+.col-8 {
+   @include grid(8, $gutter);
+}
+.col-9 {
+   @include grid(9, $gutter);
+}
+.col-10 {
+   @include grid(10, $gutter);
+}
+.col-11 {
+   @include grid(11, $gutter);
+}
+.col-12 {
+   @include grid(12, $gutter);
+}
+/*max-width:1024px*/ 
+.col_lg-1 {
+   @include grid_lg (1, $gutter);
+}
+.col_lg-2 {
+   @include grid_lg (2, $gutter);
+}
+.col_lg-3 {
+   @include grid_lg (3, $gutter);
+}
+.col_lg-4 {
+   @include grid_lg (4, $gutter);
+}
+.col_lg-5 {
+   @include grid_lg (5, $gutter);
+}
+.col_lg-6 {
+   @include grid_lg (6, $gutter);
+}
+.col_lg-7 {
+   @include grid_lg (7, $gutter);
+}
+.col_lg-8 {
+   @include grid_lg (8, $gutter);
+}
+.col_lg-9 {
+   @include grid_lg (9, $gutter);
+}
+.col_lg-10 {
+   @include grid_lg (10, $gutter);
+}
+.col_lg-11 {
+   @include grid_lg (11, $gutter);
+}
+.col_lg-12 {
+   @include grid_lg (12, $gutter);
+}
+/*max-width:992px*/ 
+.col_md-1 {
+   @include grid_md (1, $gutter);
+}
+.col_md-2 {
+   @include grid_md (2, $gutter);
+}
+.col_md-3 {
+   @include grid_md (3, $gutter);
+}
+.col_md-4 {
+   @include grid_md (4, $gutter);
+}
+.col_md-5 {
+   @include grid_md (5, $gutter);
+}
+.col_md-6 {
+   @include grid_md (6, $gutter);
+}
+.col_md-7 {
+   @include grid_md (7, $gutter);
+}
+.col_md-8 {
+   @include grid_md (8, $gutter);
+}
+.col_md-9 {
+   @include grid_md (9, $gutter);
+}
+.col_md-10 {
+   @include grid_md (10, $gutter);
+}
+.col_md-11 {
+   @include grid_md (11, $gutter);
+}
+.col_md-12 {
+   @include grid_md (12, $gutter);
+}
+
+/*max-width:768px*/ 
+.col_sm-1 {
+   @include grid_sm (1, $gutter);
+}
+.col_sm-2 {
+   @include grid_sm (2, $gutter);
+}
+.col_sm-3 {
+   @include grid_sm (3, $gutter);
+}
+.col_sm-4 {
+   @include grid_sm (4, $gutter);
+}
+.col_sm-5 {
+   @include grid_sm (5, $gutter);
+}
+.col_sm-6 {
+   @include grid_sm (6, $gutter);
+}
+.col_sm-7 {
+   @include grid_sm (7, $gutter);
+}
+.col_sm-8 {
+   @include grid_sm (8, $gutter);
+}
+.col_sm-9 {
+   @include grid_sm (9, $gutter);
+}
+.col_sm-10 {
+   @include grid_sm (10, $gutter);
+}
+.col_sm-11 {
+   @include grid_sm (11, $gutter);
+}
+.col_sm-12 {
+   @include grid_sm (12, $gutter);
+}
+
+/*max-width:576px*/ 
+.col_xs-1 {
+   @include grid_xs (1, $gutter);
+}
+.col_xs-2 {
+   @include grid_xs (2, $gutter);
+}
+.col_xs-3 {
+   @include grid_xs (3, $gutter);
+}
+.col_xs-4 {
+   @include grid_xs (4, $gutter);
+}
+.col_xs-5 {
+   @include grid_xs (5, $gutter);
+}
+.col_xs-6 {
+   @include grid_xs (6, $gutter);
+}
+.col_xs-7 {
+   @include grid_xs (7, $gutter);
+}
+.col_xs-8 {
+   @include grid_xs (8, $gutter);
+}
+.col_xs-9 {
+   @include grid_xs (9, $gutter);
+}
+.col_xs-10 {
+   @include grid_xs (10, $gutter);
+}
+.col_xs-11 {
+   @include grid_xs (11, $gutter);
+}
+.col_xs-12 {
+   @include grid_xs (12, $gutter);
+}
+
+@media screen and (max-width:1024px) {
+   
+}
+@media screen and (max-width:992px) {
+   
+}
+@media screen and (max-width:768px) {
+   
+}
+@media screen and (max-width:576px) {
+   
+}
+@media screen and (max-width:370px) {
+   
+}

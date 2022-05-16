@@ -1,0 +1,67 @@
+@import "_burger_button";
+@import "_menu_(burger_menu)"; 
+
+/*Вёрстка header*/ 
+.header {
+    // * {
+   //    outline: 1px solid red;
+   //    }
+   background: #0F0F0F;
+   &__container,
+   &__menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+   }
+   &__container {
+      max-width: 1200px;
+      width: 98%;
+      margin: 0 auto;
+      justify-content: space-between;
+   }
+   .logo {
+      &__link {
+         img {
+            display: inline-block;
+            padding: 11px 0;
+         }
+      }
+   }
+   
+   &__menu {
+      justify-content: flex-end;
+   }
+   &__icons {
+      .icons {
+         &__cart,
+         &__search {
+            text-decoration: none;
+            padding: 22px 0 22px 22px;
+         }
+      }
+   }
+}
+/*Вёрстка header - конец*/ 
+
+/* Адаптация header*/
+@media screen and (max-width:768px) {
+   .header {
+      &__icons {
+         .icons {
+            &__cart,
+            &__search {
+               padding: 11px 0 11px 11px;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width:576px) {
+   .header {
+      &__icons {
+         margin-right: 11px;
+      }
+   }
+}
+/* Адаптация header - конец*/
+

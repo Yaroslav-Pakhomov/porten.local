@@ -1,0 +1,401 @@
+/*Подключение стилей текста*/
+@import url("fonts.css");
+/*Подключения сброса стандартных стилей браузера*/
+@import url("reset.css");
+
+/*Создание переменых*/
+:root {
+  --gutter: 15px;
+  --bg: tomato;
+}
+
+/*Создание классов сетки по типу Бутстрап*/
+.col-1 {
+  width: calc(8.33% - $gutter);
+}
+
+.col-2 {
+  width: calc(16.67% - $gutter);
+}
+
+.col-3 {
+  width: calc(25% - $gutter);
+}
+
+.col-4 {
+  width: calc(33.33% - $gutter);
+}
+
+.col-5 {
+  width: calc(41.67% - $gutter);
+}
+
+.col-6 {
+  width: calc(50% - $gutter);
+}
+
+.col-7 {
+  width: calc(58.33% - $gutter);
+}
+
+.col-8 {
+  width: calc(66.67% - $gutter);
+}
+
+.col-9 {
+  width: calc(75% - $gutter);
+}
+
+.col-10 {
+  width: calc(83.33% - $gutter);
+}
+
+.col-11 {
+  width: calc(91.67% - $gutter);
+}
+
+.col-12 {
+  width: calc(100% - $gutter);
+}
+/*Конец - создание классов сетки по типу Бутстрап*/
+
+/*Все элементы и псевдоэлементы наследуют свойство html. В таком случае у нас ещё более гибкаяя структура*/
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.fixed-page {
+  overflow: hidden;
+  /*запрещаем прокручивание страницы при открытом меню*/
+}
+
+.container, .nav {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 15px;
+  /*max-width: 1200px;*/
+}
+
+/*Конец*/
+header {
+  background: #eee;
+}
+
+/*Вёрстка пунктов основного меню */
+header .nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #ddd;
+  height: 150px;
+}
+
+.nav>ul {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос на новую строку*/
+  justify-content: space-around;
+  /* выравнивание по горизонтали */
+  align-items: stretch;
+  /*выравнивание по вертикали*/
+  position: absolute;
+  right: 0;
+}
+
+.nav>ul>li {
+  position: relative;
+  text-align: center;
+}
+
+.nav>ul>li>a, .nav>ul>li>ul.submenu>li>a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.nav>ul>li>a {
+  text-align: center;
+  color: #999;
+  background: #ccc;
+  padding: 3px 25px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+}
+
+.nav>ul>li a:hover, .nav>ul li.active a {
+  color: #fff;
+  background: #555;
+}
+
+/*Вёрстка пунктов основного меню - конец */
+/*Вёрстка подменю и ссылка на него*/
+.nav>ul>li>a.submenu-link:hover {
+  color: #f00;
+}
+
+.submenu-link:after {
+  font-family: "FontAwesome";
+  color: inherit;
+}
+
+.nav>ul>li>.submenu {
+  /**/
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  padding: 0 8px 5px;
+  background: #555;
+  border-radius: 10px;
+}
+
+.nav>ul>li>.submenu>li {
+  padding: 5px 10px;
+}
+
+.nav>ul>li>.submenu>li>a {
+  width: 100%;
+  color: #333;
+  font-size: 13px;
+  padding: 5px 30px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, .9);
+}
+
+.nav>ul>li>.submenu>li:last-child a,
+.nav>ul>li>.submenu>li a:hover {
+  border-bottom: none;
+}
+
+.nav>ul>li:hover .submenu {
+  /*Появление подменю при наведении*/
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav>ul>li>.submenu>li a:hover {
+  background: #f54922;
+  color: #fff;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+/*Вёрстка подменю и ссылка на него - конец*/
+/* Кнопка мобильного меню (бургер) */
+.mobile_menu1 {
+  display: none;
+  width: 50px;
+  position: absolute;
+  right: 8%;
+  top: 16px;
+}
+
+.menu_btn1 {
+  margin: 0 auto;
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background: #a7a49c;
+}
+
+.menu_btn1 span,
+.menu_btn1::after,
+.menu_btn1::before {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12px;
+  margin-top: -1px;
+}
+
+.menu_btn1::before,
+.menu_btn1::after {
+  content: '';
+}
+
+.menu_btn1::before {
+  transform: translateY(-7px);
+}
+
+.menu_btn1::after {
+  transform: translateY(7px);
+}
+
+/* Кнопка мобильного меню (бургера) - конец */
+/*Вёрстка страницы*/
+.main {
+  background: #999;
+}
+
+.main .container {
+  background: #777;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row>div {
+  padding: 15px;
+  margin: 10px auto;
+  border: 1px solid #aaa;
+  text-align: center;
+  color: #000;
+}
+
+section.main>div>div>div.col-10 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Конец вёрстка страницы*/
+/* Адаптация кнопки мобильного меню (бургера)*/
+@media screen and (max-width: 790px) {
+  .mobile_menu1 {
+    /*Показываем бургер-меню*/
+    display: block;
+  }
+
+  .nav>ul.col-8 {
+    /*Скрываем основное горизонтальное меню*/
+    display: none;
+  }
+
+  /*Классы при нажатии кнопки бургер-меню*/
+  .menu_btn1.menu_active1>span {
+    opacity: 0;
+  }
+
+  .menu_btn1.menu_active1::before {
+    transform: rotate(45deg);
+    transition: 1s;
+    z-index: 1;
+  }
+
+  .menu_btn1.menu_active1::after {
+    transform: rotate(-45deg);
+    transition: 1s;
+    z-index: 1;
+  }
+
+  .mobile_menu1 .menu_active1 {
+    transform: translate(35px, -10px);
+    transition: 1s;
+  }
+
+  /*Классы при нажатии кнопки бургер-меню - конец*/
+  /*Основное меню при нажатии кнопки бургер-меню*/
+  .nav ul.menu_active1 {
+    overflow: auto;
+    /*для того, чтобы меню скроллилось в случае, если оно не влезает на экран*/
+    visibility: visible;
+    opacity: 0.9;
+    display: block;
+    transition: 1s;
+    position: absolute;
+    top: 0;
+    right: -6%;
+    background: #222;
+    width: 70%;
+    height: 100vh;
+    /*100% высота экрана*/
+    padding: 65px 0;
+  }
+
+  .nav>ul.menu_active1>li {
+    display: block;
+    margin: 12px auto;
+    text-align: center;
+    width: 80%;
+    border: none;
+  }
+
+  .nav>ul.menu_active1>li>a {
+    width: 100%;
+    background: #222;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+  }
+
+  .nav>ul.menu_active1>li a:hover,
+  .nav>ul.menu_active1>li.active a {
+    color: #fff;
+    background: #f54a23;
+  }
+
+  /*Конец - основное меню при нажатии кнопки бургер-меню*/
+  /*Бургер вёрстка подменю и ссылка на него*/
+  .nav ul li ul.submenu.menu_active1 {
+    display: none;
+    background: #555;
+    padding: 0;
+    position: relative;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+  }
+
+  .nav ul li ul.submenu.menu_active1 li {
+    margin-top: -105px;
+    -moz-transition: .4s linear .4s;
+    -ms-transition: .4s linear .4s;
+    -o-transition: .4s linear .4s;
+    -webkit-transition: .4s linear .4s;
+    transition: .4s linear .4s;
+  }
+
+  /*Нажатие на кнопку-ссылку подменю*/
+  .nav ul li a.submenu-link:focus~ul.submenu.menu_active1.down li {
+    /*Меню бургер при наведении и клике "~" - содержит*/
+    margin-top: 0;
+    -moz-transition: .4s linear;
+    -ms-transition: .4s linear;
+    -o-transition: .4s linears;
+    -webkit-transition: .4s linears;
+    transition: .8s linear;
+  }
+
+  .nav ul li ul.submenu.menu_active1.down {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transition: .5s;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
+  .nav ul li ul.submenu.menu_active1.down a {
+    text-align: center;
+    color: #ccc;
+    border: none;
+    font-size: 12px;
+    background: #000;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  .nav ul li ul.submenu.menu_active1.down li a:hover {
+    color: #fff;
+    background: #a00;
+    transition: 1s;
+  }
+
+  /*Нажатие на кнопку подменю - конец*/
+  /*Бургер вёрстка подменю и ссылка на него - конец*/
+}
